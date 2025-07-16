@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6877b997c0f5f554388343e7"
+  },
+  "username": "isidora",
+  "password": "$2a$10$tuFjNiMDz3WUcCTBW0Jw/.KVCSnzJqIBhernPhqkwvieY8qkCXVgC",
+  "role": "USER",
+  "_class": "com.example.backend.models.User"
+},
+{
+  "_id": {
+    "$oid": "6877b9ddc0f5f554388343ea"
+  },
+  "username": "luka",
+  "password": "$2a$10$/jbHXoJXYBiszmfEqv3Sn.iZ85GzPgDLVKSLfI.wibI8vqjt2QHbK",
+  "role": "USER",
+  "_class": "com.example.backend.models.User"
+},
+{
+  "_id": {
+    "$oid": "6877ba47c0f5f554388343ee"
+  },
+  "username": "elena",
+  "password": "$2a$10$.7/pgEf83yTEe6Y8fteyheCBNFE5y3rnpl7DY.uvddMxBp15rutgC",
+  "role": "ADMIN",
+  "_class": "com.example.backend.models.User"
+}]

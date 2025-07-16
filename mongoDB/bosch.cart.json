@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "68768b1d284a8979114cc3de"
+  },
+  "productId": "2",
+  "quantity": 7,
+  "userId": "68753f88d6072a022cdd7149",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6876f02c7b384c56cbcff8c3"
+  },
+  "productId": "3",
+  "quantity": 8,
+  "userId": "6876eafb7b384c56cbcff8c2",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6876f0317b384c56cbcff8c4"
+  },
+  "productId": "4",
+  "quantity": 6,
+  "userId": "6876eafb7b384c56cbcff8c2",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6876f2a77b384c56cbcff8c5"
+  },
+  "productId": "1",
+  "quantity": 4,
+  "userId": "6876eafb7b384c56cbcff8c2",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6876f3a37b384c56cbcff8c6"
+  },
+  "productId": "2",
+  "quantity": 2,
+  "userId": "6876eafb7b384c56cbcff8c2",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b92cc0f5f554388343e6"
+  },
+  "productId": "4",
+  "quantity": 5,
+  "userId": "68753f88d6072a022cdd7149",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b9a8c0f5f554388343e8"
+  },
+  "productId": "3",
+  "quantity": 2,
+  "userId": "6877b997c0f5f554388343e7",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b9aec0f5f554388343e9"
+  },
+  "productId": "18",
+  "quantity": 5,
+  "userId": "6877b997c0f5f554388343e7",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b9e9c0f5f554388343eb"
+  },
+  "productId": "2",
+  "quantity": 1,
+  "userId": "6877b9ddc0f5f554388343ea",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b9eec0f5f554388343ec"
+  },
+  "productId": "5",
+  "quantity": 4,
+  "userId": "6877b9ddc0f5f554388343ea",
+  "_class": "com.example.backend.models.CartItem"
+},
+{
+  "_id": {
+    "$oid": "6877b9f6c0f5f554388343ed"
+  },
+  "productId": "4",
+  "quantity": 3,
+  "userId": "6877b9ddc0f5f554388343ea",
+  "_class": "com.example.backend.models.CartItem"
+}]

@@ -84,3 +84,16 @@ JWT-secured router
 Per-user cart isolation via user ID from JWT token
 Bean validation for request payloads
 CORS support enabled
+
+### Database Setup (MongoDB)
+This application uses MongoDB with the following collections:
+product
+user
+cart
+
+You can import the sample data provided in the /mongoDB folder using the mongoimport tool.
+
+Steps to Import Data
+1.Make sure MongoDB is installed and running locally on default port (mongodb://localhost:27017).
+2.Open terminal / PowerShell and navigate to the folder where your .json files are.
+
