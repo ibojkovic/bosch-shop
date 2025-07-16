@@ -1,0 +1,14 @@
+<nav class="header">
+  <a routerLink="/product">Home</a>
+  <a routerLink="/cart">
+    Cart 🛒 ({{ cartItemCount() }})
+  </a>
+  <a routerLink="/login">Login</a>
+  <p><button (click) = "logout()">Logout</button></p>
+</nav>
+
+
+<hr />
+
+<router-outlet></router-outlet>
+

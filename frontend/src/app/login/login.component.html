@@ -1,0 +1,21 @@
+<div class="auth-container">
+  <h2>Login</h2>
+
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <label for="username">Username:</label>
+    <input id="username" [(ngModel)]="username" name="username" required />
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required />
+
+    <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+    <p class="redirect-msg">
+  Don't have an account?
+  <a href="/register">Register here</a>
+</p>
+
+  </form>
+</div>

@@ -1,0 +1,74 @@
+
+<div class="controls" class="btn-group">
+  <button type="button" class="btn btn-primary" (click) ="isGrid = true" [class.active]="isGrid">Grid</button>
+  <button type="button" class="btn btn-secondary" (click) = "isGrid = false" [class.active]="!isGrid">List</button>
+</div>
+
+<div class="search">
+  Search: <input type="text" [(ngModel)]="searchProd" (ngModelChange) = "searchSubject.next($event)" class="input">  |
+  <button (click) = "clearSearch()" style="width: 100px; height: 30px;  margin-left: 10px;
+    margin-right: 10px;">Clear</button> |
+  <p *ngIf="products.length > 0" style=" margin-left: 10px;
+    margin-right: 10px;">Found {{ paginationProd.length }} products</p>
+</div>
+
+<div class="sorting">
+  Sort by:
+  <select name="sort" id="sort" class="sort" [(ngModel)]="sort" (change) = "changeSort()">
+    <option value="none"></option>
+    <option value="lowprice">Price: low to high</option>
+    <option value="highprice">Price: high to low</option>
+    <option value="nameAZ">Name: A to Z</option>
+    <option value="nameZA">name: Z to A</option>
+  </select>
+</div>
+
+<div class="pagination">
+  <label>Item pre page: </label>
+  <select [(ngModel)]="itemsPerPage" (ngModelChange)="onItemsPerPageChange()" style="width: 100px; height: 30px; margin-left: 10px;">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+  </select>
+</div>
+
+<div *ngIf="isLoading" class="loading">Loading...</div>
+<div *ngIf="!isLoading && products.length === 0" class="empty" style="text-align: center;">No products found.</div>
+
+<div *ngIf="!isLoading && products.length > 0">
+  <div [ngClass]="isGrid ? 'grid-view' : 'list-view'">
+    <div *ngFor="let product of paginationProd" class="product-card">
+      <img [src]="'assets/' + product.images[0]" [alt]="product.name" style="width: 300px; height: 300px;" />
+
+      <div class="info">
+        <h2>
+          {{product.name}}
+        </h2>
+        <p>{{product.shortDescription}}</p>
+        <p class="price">{{ product.price | currency: 'EUR' }}</p>
+
+        <div class="cart-controls">
+          <input type="number" [(ngModel)]="product.quantity" min="1" />
+          <button (click)="addToCart(product)">Add to Cart</button>
+          <button (click)="info(product)" style="background-color: blue;">Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pagination-buttons" *ngIf="totalPage() > 1" class="pagBut">
+  <button (click)="goToPage(1)" [disabled]="currPage === 1">« First</button>
+  <button (click)="goToPage(currPage - 1)" [disabled]="currPage === 1">‹ Prev</button>
+
+  <button *ngFor="let page of [].constructor(totalPage()); let i = index"
+          (click)="goToPage(i + 1)"
+          [class.active]="currPage === i + 1">
+    {{ i + 1 }}
+  </button>
+
+  <button (click)="goToPage(currPage + 1)" [disabled]="currPage === totalPage()">Next ›</button>
+  <button (click)="goToPage(totalPage())" [disabled]="currPage === totalPage()">Last »</button>
+</div>

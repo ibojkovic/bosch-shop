@@ -1,0 +1,35 @@
+<div class="cart-container">
+  <div *ngIf="isLoading" class="loading">Loading...</div>
+  <div *ngIf="!isLoading && itemList.length === 0" class="empty">Your cart is empty.</div>
+
+
+  <div *ngIf="!isLoading && itemList.length > 0">
+      <div *ngFor="let item of itemList; let i = index;" class="cart-item">
+        <div class="product-info">
+          <img [src]="'/assets/' + prodList[i].images[0]"  alt="prodList[i].name" style="width: 150px; height: 150px;">
+
+          <div class="details">
+            <h3>{{prodList[i].name}}</h3>
+            <p>Prod id: {{prodList[i].id}}</p>
+            <p>Price: €{{ prodList[i].price }}</p>
+            <p >Total: €{{item.totalPrice}}</p>
+            <div>
+              Quantity: {{ item.quantity }}  |
+              <input type="number" [(ngModel)]="item.updQuantity" min="1" />  |
+              <button (click)="updateQuantity(item)" style="background-color: rgb(23, 26, 191);">Update quantity</button>
+            </div>
+            <button (click)="removeFromCart(item)" style="background-color: red;">Remove</button>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <div class="cart-summary" *ngIf="prodList.length > 0">
+      <h3>
+        Total Price: €{{totalPriceAllItem}}
+      </h3>
+    </div>
+  </div>
+</div>
